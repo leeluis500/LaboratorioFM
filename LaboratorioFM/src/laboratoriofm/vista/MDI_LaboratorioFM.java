@@ -20,7 +20,6 @@ public class MDI_LaboratorioFM extends javax.swing.JFrame {
      */
     public MDI_LaboratorioFM() {
         initComponents();
-        
         JOptionPane.showMessageDialog(null, "QUE TENGAS UN BUEN SERVICIO", "BIENVENIDO A FILM MAGIC", JOptionPane.DEFAULT_OPTION);
     }
 
@@ -138,6 +137,11 @@ public class MDI_LaboratorioFM extends javax.swing.JFrame {
 
         jMenu7.setText("CERRAR SESIÓN");
         jMenu7.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jMenu7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu7MouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jMenu7);
 
         setJMenuBar(jMenuBar1);
@@ -158,6 +162,14 @@ public class MDI_LaboratorioFM extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenu7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu7MouseClicked
+    int respuesta_cs = JOptionPane.showConfirmDialog(this, "¿Desea Cerrar Sesión?", "Cerrar Sesión", JOptionPane.YES_NO_OPTION);
+
+        if (respuesta_cs == 0) {
+            this.dispose();
+        }
+    }//GEN-LAST:event_jMenu7MouseClicked
 
     /**
      * @param args the command line arguments
