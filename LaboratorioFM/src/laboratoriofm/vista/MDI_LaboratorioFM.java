@@ -14,8 +14,10 @@ import javax.swing.UIManager;
  * @author leone
  */
 public class MDI_LaboratorioFM extends javax.swing.JFrame {
-private MantenimeintoClientes formMClientes;
-private Mantenimiento_VideoJuegos formVideoJuegos;
+
+    private MantenimeintoClientes formMClientes;
+    private Mantenimiento_VideoJuegos formVideoJuegos;
+    private Mantenimiento_Dvd formDvd;
 
     /**
      * Creates new form MDI_LaboratorioFM
@@ -93,10 +95,15 @@ private Mantenimiento_VideoJuegos formVideoJuegos;
         jMenuItem2.setText("jMenuItem2");
         jMenu8.add(jMenuItem2);
 
-        jMenuItem3.setText("jMenuItem3");
+        jMenuItem3.setText("Mantenimiento Dvd");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu8.add(jMenuItem3);
 
-        jMenuItem4.setText("jMenuItem4");
+        jMenuItem4.setText("Mantenimiento Video Juegos");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
@@ -174,7 +181,7 @@ private Mantenimiento_VideoJuegos formVideoJuegos;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenu7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu7MouseClicked
-    int respuesta_cs = JOptionPane.showConfirmDialog(this, "¿Desea Cerrar Sesión?", "Cerrar Sesión", JOptionPane.YES_NO_OPTION);
+        int respuesta_cs = JOptionPane.showConfirmDialog(this, "¿Desea Cerrar Sesión?", "Cerrar Sesión", JOptionPane.YES_NO_OPTION);
 
         if (respuesta_cs == 0) {
             this.dispose();
@@ -192,6 +199,12 @@ private Mantenimiento_VideoJuegos formVideoJuegos;
         formVideoJuegos.setVisible(true);
         jDesktopPane1.add(formVideoJuegos);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        formDvd = new Mantenimiento_Dvd();
+        formDvd.setVisible(true);
+        jDesktopPane1.add(formDvd);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
