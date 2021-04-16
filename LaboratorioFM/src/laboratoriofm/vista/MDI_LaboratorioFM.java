@@ -14,6 +14,8 @@ import javax.swing.UIManager;
  * @author leone
  */
 public class MDI_LaboratorioFM extends javax.swing.JFrame {
+private MantenimeintoClientes formMClientes;
+private Mantenimiento_VideoJuegos formVideoJuegos;
 
     /**
      * Creates new form MDI_LaboratorioFM
@@ -32,7 +34,7 @@ public class MDI_LaboratorioFM extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -57,16 +59,16 @@ public class MDI_LaboratorioFM extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LABORATORIO FILM MAGIC");
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 153));
+        jDesktopPane1.setBackground(new java.awt.Color(255, 255, 153));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1178, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 643, Short.MAX_VALUE)
         );
 
@@ -80,7 +82,12 @@ public class MDI_LaboratorioFM extends javax.swing.JFrame {
 
         jMenu8.setText("MANTENIMIENTOS");
 
-        jMenuItem1.setText("jMenuItem1");
+        jMenuItem1.setText("Mantenimiento Clientes");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu8.add(jMenuItem1);
 
         jMenuItem2.setText("jMenuItem2");
@@ -90,6 +97,11 @@ public class MDI_LaboratorioFM extends javax.swing.JFrame {
         jMenu8.add(jMenuItem3);
 
         jMenuItem4.setText("jMenuItem4");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu8.add(jMenuItem4);
 
         jMenuItem5.setText("jMenuItem5");
@@ -150,13 +162,11 @@ public class MDI_LaboratorioFM extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1)
         );
 
         pack();
@@ -170,6 +180,18 @@ public class MDI_LaboratorioFM extends javax.swing.JFrame {
             this.dispose();
         }
     }//GEN-LAST:event_jMenu7MouseClicked
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        formMClientes = new MantenimeintoClientes();
+        formMClientes.setVisible(true);
+        jDesktopPane1.add(formMClientes);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        formVideoJuegos = new Mantenimiento_VideoJuegos();
+        formVideoJuegos.setVisible(true);
+        jDesktopPane1.add(formVideoJuegos);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,6 +212,7 @@ public class MDI_LaboratorioFM extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -210,6 +233,5 @@ public class MDI_LaboratorioFM extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
