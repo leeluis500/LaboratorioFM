@@ -14,11 +14,8 @@ import javax.swing.UIManager;
  * @author leone
  */
 public class MDI_LaboratorioFM extends javax.swing.JFrame {
-<<<<<<< HEAD
-    private Mantenimiento_VideoJuegos formMantenimiento_Huespedes;
-=======
-private MantenimeintoClientes formMantenimientoClientes;
->>>>>>> 3ad510a0a95790cf3898c53a86fecdb898cbc523
+private MantenimeintoClientes formMClientes;
+private Mantenimiento_VideoJuegos formVideoJuegos;
 
     /**
      * Creates new form MDI_LaboratorioFM
@@ -62,11 +59,8 @@ private MantenimeintoClientes formMantenimientoClientes;
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LABORATORIO FILM MAGIC");
 
-<<<<<<< HEAD
-=======
         jDesktopPane1.setBackground(new java.awt.Color(255, 255, 153));
 
->>>>>>> 3ad510a0a95790cf3898c53a86fecdb898cbc523
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
@@ -102,7 +96,7 @@ private MantenimeintoClientes formMantenimientoClientes;
         jMenuItem3.setText("jMenuItem3");
         jMenu8.add(jMenuItem3);
 
-        jMenuItem4.setText("VideoJuegos");
+        jMenuItem4.setText("jMenuItem4");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
@@ -187,19 +181,17 @@ private MantenimeintoClientes formMantenimientoClientes;
         }
     }//GEN-LAST:event_jMenu7MouseClicked
 
-<<<<<<< HEAD
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        formMantenimiento_Huespedes = new Mantenimiento_VideoJuegos();
-        formMantenimiento_Huespedes.setVisible(true);
-        jDesktopPane1.add(formMantenimiento_Huespedes);
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
-=======
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        formMantenimientoClientes = new MantenimeintoClientes();
-        formMantenimientoClientes.setVisible(true);
-        jDesktopPane1.add(formMantenimientoClientes);        // TODO add your handling code here:
+        formMClientes = new MantenimeintoClientes();
+        formMClientes.setVisible(true);
+        jDesktopPane1.add(formMClientes);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
->>>>>>> 3ad510a0a95790cf3898c53a86fecdb898cbc523
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        formVideoJuegos = new Mantenimiento_VideoJuegos();
+        formVideoJuegos.setVisible(true);
+        jDesktopPane1.add(formVideoJuegos);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
