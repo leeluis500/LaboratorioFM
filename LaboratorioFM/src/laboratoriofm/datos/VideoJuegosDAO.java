@@ -58,11 +58,11 @@ public class VideoJuegosDAO {
             conn = Conexion.getConnection();
 //          System.out.println("ejecutando query: " + SQL_UPDATE);
             stmt = conn.prepareStatement(SQL_UPDATE);
-            stmt.setString(8, huespedes.getCodigo());
+            stmt.setString(5, huespedes.getCodigo());
             stmt.setString(1, huespedes.getNombre());
-            stmt.setString(3, huespedes.getAutor());
-            stmt.setString(4, huespedes.getGenero());
-            stmt.setString(5, huespedes.getExistencia());
+            stmt.setString(2, huespedes.getAutor());
+            stmt.setString(3, huespedes.getGenero());
+            stmt.setString(4, huespedes.getExistencia());
 
             rows = stmt.executeUpdate();
             
