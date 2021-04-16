@@ -6,7 +6,11 @@ public class Conexion {
 
     // Estas constantes deben cambiarse temporalmente para probarlo localmente
 
+<<<<<<< HEAD
+    private static final String JDBC_URL = "jdbc:mysql://localhost/filmMagic";
+=======
     private static final String JDBC_URL = "jdbc:mysql://localhost/filmmagic";
+>>>>>>> 3ad510a0a95790cf3898c53a86fecdb898cbc523
     private static final String JDBC_USER = "root";
     private static final String JDBC_PASS = "";
 
